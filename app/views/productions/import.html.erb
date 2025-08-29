@@ -1,2 +1,8 @@
-<h1>Productions#import</h1>
-<p>Find me in app/views/productions/import.html.erb</p>
+<h2>Daily Productions</h2>
+<ul>
+  <% if @daily_productions.present? %>
+    <% @daily_productions.each do |prod| %>
+      <li><%= prod.date %> : <%= prod.total_energy %></li>
+    <% end %>
+  <% end %>
+</ul>
