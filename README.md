@@ -31,3 +31,11 @@ Pour ce faire, nous mettons à votre disposition un starter d'application `RubyO
 Évidemment, nous adapterons nos observations à votre expérience du langage.
 
 **Merci de mettre le code à disposition sur un dépôt git et de nous transmettre les moyens d'y accéder.**
+
+## Étapes pour lancer l’application
+
+1. Construire l’image Docker
+docker build -t starterpack
+
+2. Lancer le server
+docker run -d -p 80:80 -e RAILS_MASTER_KEY=<Key> --name starterpack starterpack
