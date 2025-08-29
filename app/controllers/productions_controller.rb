@@ -45,7 +45,7 @@ class ProductionsController < ApplicationController
     render json: {
       date: date,
       total_energy: total,
-      hourly_productions: hourly.map { |h| { hour: h.hour, energy: h.energy } }
+      hourly_productions: hourly.map { |h| { hour: h.hour, energy: h.energy, inverter: h.inverter.identifier } }
     }
   end
 
